@@ -9,6 +9,9 @@ var save14 = $('.saveBtn14');
 var save15 = $('.saveBtn15');
 var save16 = $('.saveBtn16');
 var save17 = $('.saveBtn17');
+var date = new Date();
+date = date.getHours();
+alert(date);
 
 $("#currentDay").text(today.format("ddd MMM Do, YYYY"));
 
