@@ -9,9 +9,20 @@ var save14 = $('.saveBtn14');
 var save15 = $('.saveBtn15');
 var save16 = $('.saveBtn16');
 var save17 = $('.saveBtn17');
-var date = new Date();
-date = date.getHours();
-alert(date);
+var date = new Date().getHours();
+
+for (var i=9; i<=17; i++){
+    if(i<date){
+        //var temp = "description" + i;
+        $("#description"+i).addClass( "past" );
+    }
+    else if(i==date){
+        $("#description"+i).addClass( "present" );
+    }
+    else{
+        $("#description"+i).addClass( "future" );
+    }
+}
 
 $("#currentDay").text(today.format("ddd MMM Do, YYYY"));
 
